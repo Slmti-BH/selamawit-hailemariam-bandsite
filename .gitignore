@@ -1,7 +1,14 @@
-# Ignore Mac DS_Store files
-**.DS_Store
-# Ignore scss map files
-*.css.map
-# Ignore BandSite-Package-Sprint-1, _MACOSX folders
-**/_MACOSX ;
-**/_BandSite-Package-Sprint-1 ;
+*.css.map 
+
+# Ignore system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Editor files
+.vscode/
