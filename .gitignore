@@ -1,0 +1,7 @@
+# Ignore Mac DS_Store files
+**.DS_Store
+# Ignore scss map files
+*.css.map
+# Ignore BandSite-Package-Sprint-1, _MACOSX folders
+_MACOSX/;
+_BandSite-Package-Sprint-1/;
