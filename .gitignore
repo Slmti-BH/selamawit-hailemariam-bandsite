@@ -3,5 +3,5 @@
 # Ignore scss map files
 *.css.map
 # Ignore BandSite-Package-Sprint-1, _MACOSX folders
-
-**/_BandSite-Package-Sprint-1
+**/_MACOSX ;
+**/_BandSite-Package-Sprint-1 ;
