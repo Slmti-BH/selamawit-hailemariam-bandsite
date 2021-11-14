@@ -121,4 +121,55 @@ p {
 }
 .header__nav-link:hover {
   font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  height: 70vh;
+  position: relative;
+  background: url("../assets/images/hero-bio.jpg") 50% 50%/cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: _;
+  align-items: center;
+  flex-direction: _;
+}
+.hero__color-overlay {
+  width: 100%;
+  height: 100%;
+  background: #323232;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 80vh;
+  }
+}
+.hero__title {
+  line-height: 32px;
+  position: relative;
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  z-index: 1;
+  margin: 0 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    line-height: 44px;
+    font-size: 36px;
+    margin: 0 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    margin: 0 120px;
+  }
 }/*# sourceMappingURL=styles.css.map */
