@@ -1,3 +1,93 @@
-body{
-    background-color: aqua;
-}
+@use "./partials/global" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+@use "./partials/variables" as *;
+
+
+ 
+// @use './partials/globals' as *;
+// @use './partials/mixins' as *;
+// @use './partials/typography' as *;
+// @use './partials/variables' as *;
+
+// .header {
+//     @include flex(space-between, center);
+//     margin: 0 3rem;
+//     padding: 1rem 0;
+//     @include desktop {
+//         margin: 0 5rem;
+//     }
+
+//     &__hamburger {
+
+//         @include desktop {
+//             display: none;
+//         }
+//     }
+
+//     &__logo {
+//         @include emphasis-font;
+//         font-size: 1.125rem;
+//         @include desktop {
+//             font-size: 1.5rem;
+//         }
+//     }
+
+//     &__links {
+//         display: none;
+//         @include desktop {
+//             @include heading-font;
+//             display: flex;
+//             list-style: none;
+//             font-size: 1rem;
+//         }
+//     }
+// }
+
+// .hero {
+//     @include flex(_, center, _);
+//     height: 50vh;
+//     background-image: url(../assets/img/hero.jpg);
+//     background-size: cover;
+//     background-position: 50%;
+//     background-repeat: no-repeat;
+//     @include desktop {
+//         height: 80vh;
+//     }
+
+//     &__heading {
+//         @include emphasis-font;
+//         color: white;
+//         margin: 0 4rem;
+//         @include desktop {
+//             margin: 0 6rem;
+//             font-size: 3.75rem;
+//         }
+//     }
+// }
+
+// .feature {
+//     background-color: $body-background;
+//     @include desktop {
+//         display: flex;
+//     }
+
+//     &__content {
+//         padding: 2rem;
+//     }
+
+//     &__heading {
+//         @include heading-font;
+//     }
+// }
+
+// .footer {
+//     @include heading-font;
+//     @include flex(center, center);
+//     height: 5rem;
+//     background-color: $footer-background;
+
+//     &__text {
+//         color: white;
+//     }
+// }

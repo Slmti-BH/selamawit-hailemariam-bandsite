@@ -1,0 +1,101 @@
+
+// import all partial needed
+@use "./mixins" as *;
+@use "./typography" as *;
+@use "./variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "avenir";
+  
+}
+h1,
+h2,h3,
+p {
+    margin: 0;
+}
+
+
+// the header will be consistent between all pages of this site (i.e at global partial)
+.header{
+  padding-top: 1rem;
+  background-color: $primary-black-color;
+  @include flex(_,center,column);
+  @include tablet{
+    @include flex(_,_,row)
+  }
+  &__logo{
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 24px;
+    @include tablet {
+      width: 25%;
+      margin-left: 40px;
+      line-height: 68px;
+      font-size: 36px;
+    }
+    @include desktop{
+      margin-left: 120px;
+      width: 15%;
+    }
+  }
+  &__logo-link{
+      color:$primary-white-color;
+      text-decoration: none;
+  }
+  &__nav{
+    width: 100%;
+    @include tablet{
+      width: 40%;
+    }
+    @include desktop{
+      width: 30%;
+    }
+    
+    
+  }
+  &__nav-list{
+    margin: 0.5rem 0;
+    list-style: none;
+    font-weight: 600;
+    line-height: 22px;
+    font-size: 14px;
+    padding:0.25rem 1rem;
+
+    @include flex(space-evenly,center,row);
+    @include tablet {
+      line-height: 32px;
+      font-size: 24px;
+    }
+  
+  }
+
+
+  &__nav--active{
+    font-weight: 700;
+    color: $primary-white-color;
+    
+    text-decoration-color: $primary-white-color;
+    @include tablet{
+      text-decoration: underline;
+      text-decoration-color: $primary-white-color;
+      text-decoration-thickness: 5px;
+      text-underline-offset: 22px;
+    }  
+  }
+
+  &__nav-link{
+    text-decoration: none;
+    color: $secondary-mercury-color;
+    &:hover{
+      @extend .header__nav--active;
+      font-weight: 600;
+    }
+  }
+}

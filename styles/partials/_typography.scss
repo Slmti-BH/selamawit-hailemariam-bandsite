@@ -1,0 +1,36 @@
+// add font-face rule for page
+
+@font-face {
+    font-family: "avenir";
+    src: url("../assets/font/alternative-files/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/font/alternative-files/AvenirNextLTPro-Bold.woff") format("woff"),url("../assets/font/alternative-files/AvenirNextLTProBold.ttf") format("TrueType");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "avenir";
+    src: url("../assets/font/alternative-files/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/font/alternative-files/AvenirNextLTPro-Demi.woff") format("woff"), url("../assets/font/alternative-files/AvenirNextLTProDemi.ttf") format("TrueType");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "avenir";
+    src:url("../assets/font/alternative-files/AvenirNextLTPro.ttf") format("TrueType");
+    font-weight: 400;
+}
+
+
+// add helper mixins for page font
+@mixin page-section-header-font {
+    font-family:"avenir";
+    font-weight: 700; 
+}
+@mixin subheader-font {
+    font-family:"avenir";
+    font-weight: 600; 
+}
+
+@mixin body-footer-font {
+    font-family:"avenir";
+    font-weight: 400; 
+}
+
