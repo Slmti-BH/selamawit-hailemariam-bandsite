@@ -20,7 +20,7 @@
 
 
 // add helper mixins for page font
-@mixin page-section-header-font {
+@mixin section-header-font {
     font-family:"avenir";
     font-weight: 700; 
 }
@@ -29,8 +29,20 @@
     font-weight: 600; 
 }
 
+
 @mixin body-footer-font {
     font-family:"avenir";
     font-weight: 400; 
+}
+@mixin body-bold-font {
+    font-family:"avenir";
+    font-weight: 700; 
+}
+
+@mixin subheader-mobile-font {
+    font-family:"avenir";
+    font-weight: 600;
+    line-height: 22px;
+    font-size: 14px; 
 }
 

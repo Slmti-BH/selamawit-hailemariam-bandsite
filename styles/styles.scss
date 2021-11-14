@@ -4,45 +4,80 @@
 @use "./partials/variables" as *;
 
 // hero section
-.hero{
-    display: flex;
-    height: 70vh;
+.hero {
+  display: flex;
+  height: 70vh;
+  position: relative;
+  background: url("../assets/images/hero-bio.jpg") 50% 50% / cover;
+  background-repeat: no-repeat;
+  &__color-overlay {
+    width: 100%;
+    height: 100%;
+    background: #323232;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+  }
+  @include flex(_, center, _);
+  @include tablet {
+    height: 80vh;
+  }
+  @include desktop {
+    height: 80vh;
+  }
+
+  &__title {
+    line-height: 32px;
     position: relative;
-    background: url("../assets/images/hero-bio.jpg") 50% 50%/ cover;
-    background-repeat: no-repeat;
-    &__color-overlay{
-        width: 100%;
-        height: 100%;
-        background: #323232;
-        opacity: 0.5;
-        position: absolute;
-        top: 0;   
-    }
-    @include flex(_,center,_);
+    font-weight: 700;
+    font-size: 24px;
+    color: $primary-white-color;
+    z-index: 1;
+    margin: 0 1rem;
     @include tablet {
-        height: 80vh;
+      line-height: 44px;
+      font-size: 36px;
+      margin: 0 40px;
     }
-    @include desktop{
-        height: 80vh;
+    @include desktop {
+      margin: 0 120px;
     }
-  
-    &__title{
-       line-height: 32px;
-       position: relative;
-       font-weight: 700;
-       font-size: 24px; 
-       color:$primary-white-color;
-       z-index: 1; 
-       margin: 0 2rem;
-       @include tablet {
-        line-height: 44px;
-        font-size: 36px;
-        margin: 0 40px;
-    }
-    @include desktop{
-        margin: 0 120px;
-    }
-  
-    }  
+  }
 }
- 
+
+// about us section
+
+.about {
+  &__title {
+    @include section-header-font;
+    color: $primary-black-color;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 24px 0 16px;
+    margin-left: 16px;
+  }
+
+  &__image-container {
+    margin: 0 1rem 0.5rem;
+  }
+  &__image {
+    height: 70vh;
+    @include img;
+  }
+  &__bold-text {
+    @include body-bold-font;
+    line-height: 18px;
+    font-size: 13px;
+  }
+}
+.band-info {
+  &__header {
+    @include subheader-mobile-font;
+    padding-top: 16px;
+    padding-bottom: 8px;
+  }
+  &__text {
+    padding-bottom: 1rem;
+    font-size: 13px;
+  }
+}

@@ -18,7 +18,7 @@ body {
 h1,
 h2,h3,
 p {
-    margin: 0;
+    margin: 0 1rem;
 }
 
 
@@ -61,12 +61,14 @@ p {
     
   }
   &__nav-list{
-    margin: 0.5rem 0;
+    margin: 0;
     list-style: none;
     font-weight: 600;
     line-height: 22px;
     font-size: 14px;
-    padding:0.25rem 1rem;
+    padding: 0;
+    
+    // padding:0.25rem 1rem;
 
     @include flex(space-evenly,center,row);
     @include tablet {
@@ -77,25 +79,31 @@ p {
   }
 
 
-  &__nav--active{
-    font-weight: 700;
-    color: $primary-white-color;
-    
-    text-decoration-color: $primary-white-color;
-    @include tablet{
-      text-decoration: underline;
-      text-decoration-color: $primary-white-color;
-      text-decoration-thickness: 5px;
-      text-underline-offset: 22px;
-    }  
-  }
+ 
 
   &__nav-link{
+    display: block;
+    width: 50%;
+    padding: 0.5rem;
+    text-align: center;
     text-decoration: none;
     color: $secondary-mercury-color;
     &:hover{
       @extend .header__nav--active;
       font-weight: 600;
     }
+    @include tablet{
+      width: auto;
+      padding: 1rem;
+    
+    }
   }
+  &__nav--active{
+    font-weight: 700;
+    color: $primary-white-color;
+    border-bottom: 4px solid white;
+    text-decoration-color: $primary-white-color;
+  
+  }
+
 }
