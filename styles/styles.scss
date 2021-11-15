@@ -48,36 +48,139 @@
 // about us section
 
 .about {
+  @include desktop{
+    padding-bottom:24px ;
+  }
   &__title {
-    @include section-header-font;
     color: $primary-black-color;
-    font-size: 24px;
-    line-height: 32px;
-    padding: 24px 0 16px;
-    margin-left: 16px;
+    @include section-title-mobile;
+    @include tablet {
+      @include section-title-tablet-desktop;
+    }
+    @include desktop{
+      margin-left: 120px;
+    }
   }
 
   &__image-container {
     margin: 0 1rem 0.5rem;
+    @include tablet {
+      margin: 0 7rem 1rem;
+    }
+    @include desktop{
+      margin: 0 13rem 2rem;
+    }
   }
   &__image {
     height: 70vh;
     @include img;
+    @include tablet {
+      height: 85vh;
+    }
+    @include desktop{
+      height: 90vh;
+    }
   }
   &__bold-text {
     @include body-bold-font;
     line-height: 18px;
     font-size: 13px;
+    @include tablet {
+      margin: 0 7rem;
+      line-height: 22px;
+      font-size: 14px;
+    }
+    @include desktop{
+      margin: 0 13rem;
+    }
   }
 }
 .band-info {
-  &__header {
-    @include subheader-mobile-font;
-    padding-top: 16px;
-    padding-bottom: 8px;
+  &__title {
+    @include section-subtitle-mobile;
+    @include tablet {
+      @include section-subtitle-tablet-desktop;
+      margin-left: 7rem; 
+    }
+    @include desktop{
+      margin-left: 13rem;
+
+    }
+    
   }
   &__text {
     padding-bottom: 1rem;
     font-size: 13px;
+    line-height: 18px;
+    @include tablet {
+      line-height: 22px;
+      font-size: 14px;
+      width: 40%;
+      padding-bottom: 1.5rem;
+    }
+    @include desktop{
+      width: 45%;
+    }
+  }
+  &__container {
+    @include tablet {
+      margin: 0 7rem;
+      @include flex(space-between, _, row);
+    }
+    @include desktop{
+      margin: 0 13rem;
+    }
+  }
+  &__text-content {
+    @include tablet {
+      margin: 0;
+    }
+  }
+}
+
+
+.photo-gallery {
+  background-color: $secondary-alabaster-color;
+  @include tablet{
+    padding-bottom: 1rem;
+  }
+  @include desktop{
+    padding-bottom: 24px;
+  }
+  &__title {
+    @include section-title-mobile;
+    @include tablet{
+      @include section-title-tablet-desktop;
+    }
+    @include desktop{
+      margin-left: 120px;
+    }
+  }
+  &__container {
+    @include flex(_, _, column);
+    @extend .about__image-container;
+    @include tablet {
+      @include flex(space-between, _, row);
+      flex-wrap: wrap;
+      margin: 0 40px;
+    }
+    @include desktop {
+      @include flex(space-between, _, row);
+      flex-wrap: wrap;
+      margin: 0 120px;
+    }
+  }
+  &__item {
+    margin-bottom: 0.5rem;
+    @include tablet {
+      width: 32%;
+      margin-bottom: 0.5rem;
+    }
+    @include desktop{
+      margin-bottom: 1rem;
+    }
+  }
+  &__image {
+    @include img;
   }
 }

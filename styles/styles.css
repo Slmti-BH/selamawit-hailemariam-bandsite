@@ -29,6 +29,13 @@ h2, h3,
 p {
   margin: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  h1,
+h2, h3,
+p {
+    margin: 0 40px;
+  }
+}
 
 .header {
   padding-top: 1rem;
@@ -64,6 +71,9 @@ p {
     margin-left: 120px;
     width: 15%;
   }
+}
+.header__logo-text {
+  margin: 0;
 }
 .header__logo-link {
   color: #FFFFFF;
@@ -176,17 +186,47 @@ p {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .about {
+    padding-bottom: 24px;
+  }
+}
 .about__title {
+  color: #323232;
   font-family: "avenir";
   font-weight: 700;
-  color: #323232;
   font-size: 24px;
   line-height: 32px;
   padding: 24px 0 16px;
   margin-left: 16px;
 }
-.about__image-container {
+@media screen and (min-width: 768px) {
+  .about__title {
+    font-family: "avenir";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 48px 0 24px;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__title {
+    margin-left: 120px;
+  }
+}
+.about__image-container, .photo-gallery__container {
   margin: 0 1rem 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .about__image-container, .photo-gallery__container {
+    margin: 0 7rem 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__image-container, .photo-gallery__container {
+    margin: 0 13rem 2rem;
+  }
 }
 .about__image {
   height: 70vh;
@@ -194,22 +234,173 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 768px) {
+  .about__image {
+    height: 85vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__image {
+    height: 90vh;
+  }
+}
 .about__bold-text {
   font-family: "avenir";
   font-weight: 700;
   line-height: 18px;
   font-size: 13px;
 }
+@media screen and (min-width: 768px) {
+  .about__bold-text {
+    margin: 0 7rem;
+    line-height: 22px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__bold-text {
+    margin: 0 13rem;
+  }
+}
 
-.band-info__header {
+.band-info__title {
   font-family: "avenir";
   font-weight: 600;
-  line-height: 22px;
+  padding: 16px 0 8px;
   font-size: 14px;
-  padding-top: 16px;
-  padding-bottom: 8px;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) {
+  .band-info__title {
+    font-family: "avenir";
+    font-weight: 600;
+    padding: 32px 0 1rem;
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .band-info__title {
+    margin-left: 13rem;
+  }
 }
 .band-info__text {
   padding-bottom: 1rem;
   font-size: 13px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .band-info__text {
+    line-height: 22px;
+    font-size: 14px;
+    width: 40%;
+    padding-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .band-info__text {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .band-info__container {
+    margin: 0 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: _;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .band-info__container {
+    margin: 0 13rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .band-info__text-content {
+    margin: 0;
+  }
+}
+
+.photo-gallery {
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery {
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery {
+    padding-bottom: 24px;
+  }
+}
+.photo-gallery__title {
+  font-family: "avenir";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 24px 0 16px;
+  margin-left: 16px;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__title {
+    font-family: "avenir";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 48px 0 24px;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery__title {
+    margin-left: 120px;
+  }
+}
+.photo-gallery__container {
+  display: flex;
+  justify-content: _;
+  align-items: _;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: _;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: _;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 120px;
+  }
+}
+.photo-gallery__item {
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__item {
+    width: 32%;
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery__item {
+    margin-bottom: 1rem;
+  }
+}
+.photo-gallery__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */
