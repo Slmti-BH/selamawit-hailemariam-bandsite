@@ -1,7 +1,7 @@
 // to import breakpoint variables
 @use "./variables" as *;
 
-// media queries for responsive design at each breakpoint 
+// mixin media queries for responsive design at each breakpoint 
 @mixin desktop {
     @media screen and (min-width: $desktop-breakpoint){
         @content;
@@ -24,6 +24,8 @@
     align-items: $align-items;
     flex-direction: $flex-direction;
 }
+
+
 
 // mixin for titles
 @mixin section-title-mobile {
@@ -62,8 +64,22 @@
     
 }
 
+@mixin footer-font-mobile {
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 13px;   
+}
 
-// helper for image elements
+@mixin footer-font-tablet-desktop{
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+
+}
+
+
+
+// helper for image to fit in container
 @mixin img{
     width: 100%;
     object-fit: cover;

@@ -25,7 +25,6 @@ p {
     
 }
 
-
 // the header will be consistent between all pages of this site (i.e at global partial)
 .header{
   padding-top: 1rem;
@@ -35,22 +34,20 @@ p {
     @include flex(_,_,row)
   }
   &__logo{
-    font-weight: 400;
-    line-height: 32px;
-    font-size: 24px;
-    @include tablet {
-      width: 25%;
-      margin-left: 40px;
-      line-height: 68px;
-      font-size: 36px;
-    }
     @include desktop{
-      margin-left: 120px;
-      width: 15%;
+    width: 120px;
+    height: 20px;
+    margin-left: 120px;
     }
   }
-  &__logo-text{
-    margin: 0;
+  &__logo-image{
+    @include tablet{
+      margin-left: 40px;
+    }
+    @include desktop{
+      margin-left: 0px; 
+      
+    } 
   }
   &__logo-link{
       color:$primary-white-color;
@@ -59,12 +56,11 @@ p {
   &__nav{
     width: 100%;
     @include tablet{
-      width: 40%;
+      width: 50%;
     }
     @include desktop{
-      width: 30%;
+      width: 40%;
     }
-    
     
   }
   &__nav-list{
@@ -74,8 +70,6 @@ p {
     line-height: 22px;
     font-size: 14px;
     padding: 0;
-    
-    // padding:0.25rem 1rem;
 
     @include flex(space-evenly,center,row);
     @include tablet {
@@ -85,12 +79,10 @@ p {
   
   }
 
-
- 
-
   &__nav-link{
     display: block;
     width: 50%;
+    
     padding: 0.5rem;
     text-align: center;
     text-decoration: none;
@@ -102,7 +94,7 @@ p {
     @include tablet{
       width: auto;
       padding: 1rem;
-    
+      font-size: 14px;
     }
   }
   &__nav--active{
@@ -110,7 +102,99 @@ p {
     color: $primary-white-color;
     border-bottom: 4px solid white;
     text-decoration-color: $primary-white-color;
-  
   }
 
 }
+
+
+
+// footer will be consistent between all pages of this site (i.e at global partial)
+.footer{
+  position: relative;
+  padding-top: 1rem;
+  @include tablet{
+    padding-top: 1.5rem;
+  }
+  @include desktop{
+    padding-top: 2rem;
+  }
+  background-color: $primary-black-color;
+  color: $primary-white-color;
+ 
+  &__title{
+    @include footer-font-mobile;
+    font-size: 20px;
+    font-weight: 600;
+    @include tablet{
+      @include footer-font-tablet-desktop;
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+  &__wrapper{
+    @include flex(space-between,_,column);
+    @include tablet {
+      @include flex(space-between,center,);
+      width: 52%;
+      @include desktop{
+        width: 32%; 
+        margin: 0 80px;
+        
+      }
+    }
+    
+  }
+  &__icon-container{
+    width: 15%;
+    margin:1rem 1rem;
+    @include flex(space-between,_,);
+    @include tablet {
+      width: 22%;
+    }
+    @include desktop {
+      width: 25%;
+    }
+  }
+  &__contacts-container{
+    @include flex(space-between,_,column);
+    @include tablet{
+      @include flex(space-between,_,row);
+    }
+    @include desktop{
+      width: 60%;
+      margin: 0 80px;
+    }
+  }
+  &__contact{
+    margin-bottom:1.5rem;
+  }
+  &__contact-text{
+    margin-bottom: 0.5rem;
+    @include footer-font-mobile;
+  }
+  &__copyright{
+    margin-top: 40px;
+    padding-bottom: 0.5rem;
+    @include tablet{
+      @include footer-font-tablet-desktop;
+      margin-top: 0.5rem;
+    }
+    @include desktop{
+      padding-bottom: 1rem;
+      margin-left: 120px;
+    }
+  }
+  &__logo{
+    width: 80px;
+    height: auto;
+    position: absolute;
+    left: 1rem;
+    bottom: 40px;
+    @include tablet{
+    position: absolute;
+    left: 85%;
+    top:40px ;
+    }
+  }
+} 
+
