@@ -20,7 +20,7 @@ h2,h3,
 p {
     margin: 0 1rem;
     @include tablet{
-      margin:0 40px;
+      margin:0 2.5rem;
     }
     
 }
@@ -35,14 +35,14 @@ p {
   }
   &__logo{
     @include desktop{
-    width: 120px;
-    height: 20px;
-    margin-left: 120px;
+    width: 7.5rem;
+    height: 1.25rem;
+    margin-left: 7.5rem;
     }
   }
   &__logo-image{
     @include tablet{
-      margin-left: 40px;
+      margin-left: 2.5rem;
     }
     @include desktop{
       margin-left: 0px; 
@@ -67,14 +67,14 @@ p {
     margin: 0;
     list-style: none;
     font-weight: 600;
-    line-height: 22px;
-    font-size: 14px;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
     padding: 0;
 
     @include flex(space-evenly,center,row);
     @include tablet {
-      line-height: 32px;
-      font-size: 24px;
+      line-height: 2rem;
+      font-size: 1.5rem;
     }
   
   }
@@ -94,7 +94,7 @@ p {
     @include tablet{
       width: auto;
       padding: 1rem;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
   &__nav--active{
@@ -110,7 +110,7 @@ p {
 
 // footer will be consistent between all pages of this site (i.e at global partial)
 .footer{
-  position: relative;
+  position: relative;/*to make the footer logo move in relation to to footer*/
   padding-top: 1rem;
   @include tablet{
     padding-top: 1.5rem;
@@ -127,7 +127,7 @@ p {
     font-weight: 600;
     @include tablet{
       @include footer-font-tablet-desktop;
-      font-size: 22px;
+      font-size: 1.375rem;
       font-weight: 600;
     }
   }
@@ -181,19 +181,19 @@ p {
     }
     @include desktop{
       padding-bottom: 1rem;
-      margin-left: 120px;
+      margin-left: 7.5rem;
     }
   }
   &__logo{
-    width: 80px;
+    width: 5rem;
     height: auto;
     position: absolute;
     left: 1rem;
-    bottom: 40px;
+    bottom: 2.5rem;
     @include tablet{
-    position: absolute;
+    position: absolute;/*to make the footer logo move in relation to to footer*/
     left: 85%;
-    top:40px ;
+    top:2.5rem ;
     }
   }
 } 
