@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../assets/font/alternative-files/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/font/alternative-files/AvenirNextLTPro-Bold.woff") format("woff"), url("../assets/font/alternative-files/AvenirNextLTProBold.ttf") format("TrueType");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../assets/font/alternative-files/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/font/alternative-files/AvenirNextLTPro-Demi.woff") format("woff"), url("../assets/font/alternative-files/AvenirNextLTProDemi.ttf") format("TrueType");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("../assets/font/alternative-files/AvenirNextLTPro.ttf") format("TrueType");
+  font-weight: 400;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "avenir";
+}
+
+h1,
+h2, h3,
+p {
+  margin: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  h1,
+h2, h3,
+p {
+    margin: 0 2.5rem;
+  }
+}
+
+.header {
+  padding-top: 1rem;
+  background-color: #323232;
+  display: flex;
+  justify-content: _;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: _;
+    align-items: _;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    width: 7.5rem;
+    height: 1.25rem;
+    margin-left: 7.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo-image {
+    margin-left: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__logo-image {
+    margin-left: 0px;
+  }
+}
+.header__logo-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.header__nav {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__nav {
+    width: 40%;
+  }
+}
+.header__nav-list {
+  margin: 0;
+  list-style: none;
+  font-weight: 600;
+  line-height: 1.375rem;
+  font-size: 0.875rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+@media screen and (min-width: 768px) {
+  .header__nav-list {
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+}
+.header__nav-link {
+  display: block;
+  width: 50%;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #E1E1E1;
+}
+.header__nav-link:hover {
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .header__nav-link {
+    width: auto;
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+.header__nav--active, .header__nav-link:hover {
+  font-weight: 700;
+  color: #FFFFFF;
+  border-bottom: 4px solid white;
+  -webkit-text-decoration-color: #FFFFFF;
+          text-decoration-color: #FFFFFF;
+}
+
+.footer {
+  position: relative;
+  /*to make the footer logo move in relation to to footer*/
+  padding-top: 1rem;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding-top: 2rem;
+  }
+}
+.footer__title {
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 13px;
+  font-size: 20px;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    font-size: 1.375rem;
+    font-weight: 600;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: _;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 52%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .footer__wrapper {
+    width: 32%;
+    margin: 0 80px;
+  }
+}
+.footer__icon-container {
+  width: 15%;
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: _;
+  flex-direction: row;
+}
+@media screen and (min-width: 768px) {
+  .footer__icon-container {
+    width: 22%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__icon-container {
+    width: 25%;
+  }
+}
+.footer__contacts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: _;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: _;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__contacts-container {
+    width: 60%;
+    margin: 0 80px;
+  }
+}
+.footer__contact {
+  margin-bottom: 1.5rem;
+}
+.footer__contact-text {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 13px;
+}
+.footer__copyright {
+  margin-top: 40px;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright {
+    padding-bottom: 1rem;
+    margin-left: 7.5rem;
+  }
+}
+.footer__logo {
+  width: 5rem;
+  height: auto;
+  position: absolute;
+  left: 1rem;
+  bottom: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    position: absolute;
+    /*to make the footer logo move in relation to to footer*/
+    left: 85%;
+    top: 2.5rem;
+  }
+}
+
+.hero {
+  display: flex;
+  height: 70vh;
+  position: relative;
+  background: url("../assets/images/hero-shows.jpg") 50% 50%/cover;
+  /* to fit and center the background image on section*/
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: _;
+  align-items: center;
+  flex-direction: _;
+}
+.hero__color-overlay {
+  width: 100%;
+  /*create equal div for color overlay*/
+  height: 100%;
+  background: #323232;
+  opacity: 0.5;
+  position: absolute;
+  /*to position the div exactly on top */
+  top: 0;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 80vh;
+  }
+}
+.hero__title {
+  line-height: 2rem;
+  position: relative;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  z-index: 1;
+  margin: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    line-height: 2.75rem;
+    font-size: 2.25rem;
+    margin: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    margin: 0 7.5rem;
+  }
+}/*# sourceMappingURL=shows.css.map */

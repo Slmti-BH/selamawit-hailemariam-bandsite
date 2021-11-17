@@ -1,0 +1,46 @@
+@use "./partials/global" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+@use "./partials/variables" as *;
+
+// hero section
+.hero {
+  display: flex;
+  height: 70vh;
+  position: relative;
+  background: url("../assets/images/hero-shows.jpg") 50% 50% / cover; /* to fit and center the background image on section*/
+  background-repeat: no-repeat;
+  &__color-overlay {
+    width: 100%;/*create equal div for color overlay*/
+    height: 100%;
+    background: #323232;
+    opacity: 0.5;
+    position: absolute;/*to position the div exactly on top */
+    top: 0;
+  }
+  @include flex(_, center, _);
+  @include tablet {
+    height: 80vh;
+  }
+  @include desktop {
+    height: 80vh;
+  }
+
+  &__title {
+    line-height: 2rem;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $primary-white-color;
+    z-index: 1;
+    margin: 0 1rem;
+    @include tablet {
+      line-height: 2.75rem;
+      font-size: 2.25rem;
+      margin: 0 2.5rem;
+    }
+    @include desktop {
+      margin: 0 7.5rem;
+    }
+  }
+}
