@@ -12,3 +12,6 @@ ehthumbs.db
 
 # Editor files
 .vscode/
+
+# ignore the copydeck folder
+copydeck/
