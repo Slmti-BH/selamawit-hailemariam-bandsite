@@ -41,9 +41,9 @@ const shows=[
 
 // console.log(shows);
  const showsList = document.querySelector(".shows");
-//  create the title before the other functions
+//  create the title before the other card elements
 const titleElement = document.createElement("h2");
-    titleElement.classList.add("show-title");
+    titleElement.classList.add("shows__title");
     titleElement.innerText= "SHOWS";
     showsList.appendChild(titleElement);
 
@@ -63,37 +63,46 @@ function createCardElement(show){
     cardElement.classList.add("show-card");
 
     
+    const dateDiv = document.createElement("div");
 
     const dateElement = document.createElement("h3");
-    dateElement.classList.add("shows__subtitle")
+    dateElement.classList.add("show-card__subtitle")
     dateElement.innerHTML = "DATE";
-    cardElement.appendChild(dateElement);
+    dateDiv.appendChild(dateElement);
 
     let showDate = createShowDate(show);
-    cardElement.appendChild(showDate);
+    dateDiv.appendChild(showDate);
 
+    const venueDiv = document.createElement("div");
+
+    
     const venueElement = document.createElement("h3");
-    venueElement.classList.add("shows__subtitle")
+    venueElement.classList.add("show-card__subtitle")
     venueElement.innerHTML = "VENUE";
-    cardElement.appendChild(venueElement);
+    venueDiv.appendChild(venueElement);
 
     let showVenue = createShowVenue(show);
-    cardElement.appendChild(showVenue);
+    venueDiv.appendChild(showVenue);
 
+    const locationDiv = document.createElement("div");
     
     let showLocation = document.createElement("h3");
-    showLocation.classList.add("shows__subtitle");
+    showLocation.classList.add("show-card__subtitle");
     showLocation.innerText = "LOCATION";
-    cardElement.appendChild(showLocation);
+    locationDiv.appendChild(showLocation);
 
     const locationElement = createShowLocation(show);
-    cardElement.appendChild(locationElement);
+    locationDiv.appendChild(locationElement);
     
-
+    cardElement.appendChild(dateDiv);
+    cardElement.appendChild(venueDiv);
+    cardElement.appendChild(locationDiv);
+    
     let shopBtn = document.createElement("button");
     shopBtn.classList.add("show-card__btn");
     shopBtn.innerText = "BUY TICKETS";
     cardElement.appendChild(shopBtn);
+    
     
     return cardElement;
 

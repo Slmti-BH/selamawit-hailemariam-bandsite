@@ -3,49 +3,54 @@
 @use "./partials/typography" as *;
 @use "./partials/variables" as *;
 
+
+
 // hero section
-.hero {
-  display: flex;
-  height: 70vh;
-  position: relative;
-  background: url("../assets/images/hero-shows.jpg") 50% 50% / cover; /* to fit and center the background image on section*/
-  background-repeat: no-repeat;
-  &__color-overlay {
-    width: 100%; /*create equal div for color overlay*/
-    height: 100%;
-    background: #323232;
-    opacity: 0.5;
-    position: absolute; /*to position the div exactly on top */
-    top: 0;
-  }
-  @include flex(_, center, _);
-  @include tablet {
-    height: 80vh;
-  }
-  @include desktop {
-    height: 80vh;
-  }
+.hero{
+  height: fit-content;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 
-  &__title {
-    line-height: 2rem;
-    position: relative;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: $primary-white-color;
+  &__title{
+    font-weight: 600;
+    color: $secondary-alabaster-color;
+    font-size: 18px;
+    margin: 20px 1rem;
+   
+    
+  }
+  &__subtitle{
     z-index: 1;
-    margin: 0 1rem;
-    @include tablet {
-      line-height: 2.75rem;
-      font-size: 2.25rem;
-      margin: 0 2.5rem;
-    }
-    @include desktop {
-      margin: 0 7.5rem;
-    }
+    color: $primary-white-color;
+    font-weight: 600;
+    font-size: 25px;
+    
+  }
+
+  &__sound-cloud{
+   
+    z-index: 1;
+    opacity: 0.9;
+    padding:1rem 1rem;
+    
+
+  }
+  &__sound-cloud-link{
+    display: none;
   }
 }
 
-.show-card{
-  display: flex;
-  // flex-direction: column;
+
+.shows{
+  &__title{
+    
+    @include section-title-mobile;
+    margin-top: 40px;
+    
+  }
+
 }
+
+
+
