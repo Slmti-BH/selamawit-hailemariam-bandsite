@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandsite</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/bio.css">
 </head>
 <body>
     <!-- header -->
@@ -87,6 +87,40 @@
             </div>
         </article>
 
+        <section class="comments">
+            <h2>Join the Conversation</h2>
+            <div class = "comments__form-wrapper"> 
+                <img  class= "comments__form-image" src="./assets/images/Mohan-muruge.jpg" alt="head shot of Mohan-muruge">
+
+                <form class= "comments-form" action="">
+                    <div>
+                    <label for="name" class= "comments-form__name">NAME</label><br>
+                    <input name="name" class= "comments-form__title-input" type="text" placeholder="Enter your name"> 
+                    </div>
+                    <div>
+                        <label for="comment-content" class= "comments-form__title">COMMENT</label><br>
+                        <textarea name="commentContent" id="" cols="30" rows="10" placeholder="Add a new comment"></textarea>
+                    </div>
+                    <div>
+                        <button class="comments-form__btn" type="submit">COMMENT</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="comments-cards">
+            <!-- <article class="comment">
+                <span class= "comment__image-placeholder"></span>
+                <div class="comment__wrapper">
+                <h3 class = "comment__title">Name</h3>
+                <p class = "comment__date" >01/09/2021</p>
+                <p class = "comment__text">text</p>
+                </div>
+
+            </article> -->
+            </div>
+
+        </section>
+
         
     </main>
 
@@ -129,7 +163,7 @@
         </a>
         <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
     </footer>
-    <!-- link the right Js file at the end of the  -->
+    <!-- link the right Js file at the end of the page  -->
     <script src="./scripts/index-page.js"></script>
 </body>
 </html>

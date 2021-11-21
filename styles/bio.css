@@ -537,4 +537,40 @@ p {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.comments {
+  padding: 20px;
+}
+.comments:last-child {
+  border-bottom: 2px solid black;
+}
+
+.comment {
+  display: flex;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+.comment__placeholder {
+  background-color: chocolate;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.comment__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.comment__title {
+  width: 20%;
+}
+.comment__date {
+  width: 20%;
+}
+.comment__text {
+  width: 100%;
+}/*# sourceMappingURL=bio.css.map */

@@ -318,4 +318,8 @@ p {
   .hero__title {
     margin: 0 7.5rem;
   }
+}
+
+.show-card {
+  display: flex;
 }/*# sourceMappingURL=shows.css.map */
