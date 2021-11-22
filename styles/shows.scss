@@ -3,54 +3,160 @@
 @use "./partials/typography" as *;
 @use "./partials/variables" as *;
 
-
-
 // hero section
-.hero{
+.hero {
   height: fit-content;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
 
-  &__title{
+  &__title {
     font-weight: 600;
     color: $secondary-alabaster-color;
     font-size: 18px;
     margin: 20px 1rem;
-   
-    
   }
-  &__subtitle{
+  &__subtitle {
     z-index: 1;
     color: $primary-white-color;
     font-weight: 600;
     font-size: 25px;
-    
   }
+  // sound cloud
+  &__sound-cloud {
+    padding-bottom: 2rem;
 
-  &__sound-cloud{
-   
     z-index: 1;
     opacity: 0.9;
-    padding:1rem 1rem;
-    
-
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
   }
-  &__sound-cloud-link{
+  &__sound-cloud-link {
     display: none;
   }
 }
 
 
-.shows{
-  &__title{
-    
+// main section-shows
+.shows {
+  &__title {
     @include section-title-mobile;
-    margin-top: 40px;
+    padding-top: 20px;
+    @include tablet{
+      @include section-title-tablet-desktop
+    }
+    @include desktop{
+      margin-left: 120px;
+    }
     
   }
+  &__wrapper {
+    @include flex(_, _, column);
 
+    @include tablet{
+      margin: 0 1rem 2.5rem;
+    }
+    @include desktop{
+      margin-left: 340px;
+      margin-right: 120px;
+    }
+    
+  }
 }
 
+.show-card {
+  @include tablet{
+    @include flex(space-between,_,);
+    
+  }
+  &__date {
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 14px;
+    @include tablet{
+      margin-left: calc(40px - 1rem);
+      
+    }
+  }
+  border-bottom: 2px solid $secondary-mercury-color;
+  &__subtitle {
+    @include section-subtitle-mobile;
+    font-size: 13px;
+    color: $primary-silver-color;
+    @include tablet{
+      padding-top: 0;
+      padding-bottom: 2rem;
 
+    }
+  }
+  
+  &__venue {
+    font-weight: 600;
+    @include tablet{
+      margin-left: 24px;
+      
+    }
+  }
+  &__location {
+    @extend .show-card__venue;
+  }
 
+  // to display subtitles only on first show card
+  &__subtitle{
+    @include tablet{
+      visibility: hidden
+     
+    }
+
+  }
+  // to display subtitles only on first show card
+  &:first-child{
+
+    @include tablet{
+      h3 {
+        visibility: visible;
+      }
+    }
+  }
+  
+
+  &__flex-container{
+    margin-bottom: 2rem;
+    @include tablet{
+      &>*{/* inner content not alining properly, reset the margin on all */
+        margin: 0;
+      }
+      &:first-child{/*  reset the first child with the right margin*/
+        margin-left: calc(40px - 1rem);
+        
+
+      }
+      @include flex(_,_,column);
+      width: 25%;
+     
+     
+      
+    }
+  }
+  &__btn {
+    font-size: 15px;
+    font-weight: 600;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    color: $primary-white-color;
+    background-color: $primary-black-color;
+    padding: 0.7rem;
+    border-radius: 6px;
+    @include tablet{
+      font-size: 16px;
+      width: 25%;
+      margin: 1.5rem;
+    }
+  }
+  &:hover {
+    background-color: $secondary-alabaster-color;
+  }
+  &:active {
+    background-color: $secondary-mercury-color;
+  }
+}

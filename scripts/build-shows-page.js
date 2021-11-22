@@ -39,24 +39,32 @@ const shows=[
     }
 ];
 
-// console.log(shows);
+// select a spot in the html to put the shows
  const showsList = document.querySelector(".shows");
+
 //  create the title before the other card elements
 const titleElement = document.createElement("h2");
-    titleElement.classList.add("shows__title");
-    titleElement.innerText= "SHOWS";
-    showsList.appendChild(titleElement);
+titleElement.classList.add("shows__title");
+titleElement.innerText= "Shows";
+showsList.appendChild(titleElement);
 
+// create a wrapper div for all the show cards in the showsList
+const showsWrapperElement = document.createElement("div");
+showsWrapperElement.classList.add("shows__wrapper");
+
+
+// function to loop through the shows array and display shows in showsList
 function displayShows(){
     for (let i= 0; i< shows.length; i++){
         let show = shows[i];
         let showCard = createCardElement(show);
-        showsList.appendChild(showCard);
+        showsWrapperElement.appendChild(showCard);
     }
 };
 
 displayShows ();
 
+// create each show's card
 function createCardElement(show){
 
     let cardElement = document.createElement("article");
@@ -64,6 +72,7 @@ function createCardElement(show){
 
     
     const dateDiv = document.createElement("div");
+    dateDiv.classList.add("show-card__flex-container");
 
     const dateElement = document.createElement("h3");
     dateElement.classList.add("show-card__subtitle")
@@ -74,6 +83,7 @@ function createCardElement(show){
     dateDiv.appendChild(showDate);
 
     const venueDiv = document.createElement("div");
+    venueDiv.classList.add("show-card__flex-container")
 
     
     const venueElement = document.createElement("h3");
@@ -85,6 +95,8 @@ function createCardElement(show){
     venueDiv.appendChild(showVenue);
 
     const locationDiv = document.createElement("div");
+    locationDiv.classList.add("show-card__flex-container")
+
     
     let showLocation = document.createElement("h3");
     showLocation.classList.add("show-card__subtitle");
@@ -107,7 +119,10 @@ function createCardElement(show){
     return cardElement;
 
 }
+// append all the show cards in showsWrapperElement to where you want to display on html file (showsList)
+showsList.appendChild(showsWrapperElement);
 
+// to create the date of the show card
 function createShowDate(show){
     let showDate = document.createElement("time");
     showDate.classList.add("show-card__date");
@@ -117,6 +132,7 @@ function createShowDate(show){
     return showDate;
 }
 
+// to create the venue of the show card
 function createShowVenue(show){
     let showVenue = document.createElement("p");
     showVenue.classList.add("show-card__venue");
@@ -126,6 +142,7 @@ function createShowVenue(show){
     return showVenue;
 }
 
+// to create the location of the show card
 function createShowLocation(show){
     let showLocation = document.createElement("p");
     showLocation.classList.add("show-card__location");
