@@ -321,9 +321,6 @@ p {
 }
 
 .hero {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
@@ -334,21 +331,91 @@ p {
   font-size: 18px;
   margin: 20px 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-family: "avenir";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 48px 0 24px;
+    margin-left: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
 .hero__subtitle {
   z-index: 1;
   color: #FFFFFF;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 36px;
+}
+@media screen and (min-width: 768px) {
+  .hero__subtitle {
+    font-family: "avenir";
+    font-weight: 600;
+    padding: 32px 0 1rem;
+    font-size: 24px;
+    line-height: 32px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__subtitle {
+    width: 40%;
+  }
 }
 .hero__sound-cloud {
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   z-index: 1;
   opacity: 0.9;
   width: calc(100% - 2rem);
   margin-left: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__sound-cloud {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__sound-cloud {
+    width: 40%;
+    align-self: flex-end;
+  }
+}
 .hero__sound-cloud-link {
   display: none;
+}
+.hero__flex-container {
+  width: 100%;
+  display: flex;
+  justify-content: _;
+  align-items: _;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .hero__flex-container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__flex-container {
+    width: calc(100% - 160px);
+    margin-right: 40px;
+    margin-left: 80px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    vertical-align: middle;
+  }
 }
 
 .shows__title {

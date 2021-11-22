@@ -5,7 +5,7 @@
 
 // hero section
 .hero {
-  height: fit-content;
+  // height: fit-content;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
@@ -15,24 +15,68 @@
     color: $secondary-alabaster-color;
     font-size: 18px;
     margin: 20px 1rem;
+    @include tablet{
+      @include section-title-tablet-desktop;
+      font-size: 25px;
+      font-weight: 600;
+      margin-left: 40px;
+    }
+    @include desktop{
+      width: 100%;
+      padding-bottom: 0;
+    }
   }
   &__subtitle {
     z-index: 1;
     color: $primary-white-color;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 36px;
+    @include tablet{
+      @include section-subtitle-tablet-desktop;
+      font-size: 40px;
+      font-weight: 700;
+    }
+    @include desktop{
+      width: 40%;
+    }
   }
   // sound cloud
   &__sound-cloud {
-    padding-bottom: 2rem;
+    padding: 2rem 0;
 
     z-index: 1;
     opacity: 0.9;
     width: calc(100% - 2rem);
     margin-left: 1rem;
+    @include tablet{
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    }
+    @include desktop{
+      width: 40%;
+      align-self: flex-end;
+    }
   }
+  // to get ride of the floating links from sound cloud
   &__sound-cloud-link {
     display: none;
+  }
+  &__flex-container{
+    width: 100%;
+    @include flex(_,_,column);
+    @include tablet{
+      width: 70%;
+    }
+    @include desktop{
+      width: calc(100% - 160px);
+      margin-right:  40px;
+      margin-left: 80px;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      vertical-align: middle
+    }
+
   }
 }
 
@@ -160,3 +204,6 @@
     background-color: $secondary-mercury-color;
   }
 }
+
+
+
