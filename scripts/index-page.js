@@ -47,7 +47,7 @@ form.addEventListener("submit", (event) => {
   displayComments();/*display it again with the new comments on the html page */
 });
 
-const commentsDiv = document.querySelector(".comments-cards");
+let commentsDiv = document.querySelector(".comments-cards");
 
 // function to display the comments to the comments div
 function displayComments() {
