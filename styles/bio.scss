@@ -149,46 +149,168 @@
 // comment section
 
 .comments {
-  // height: 500vh;
+  
+  &__title{
+    @include section-title-mobile;
+    @include tablet{
+      @include section-title-tablet-desktop;
+    }
+    @include desktop{
+      margin-left: 120px;
+      font-size: 40px;
+    }
 
-  // height: 50vh;
-  padding: 20px;
-  &:last-child {
-    border-bottom: 2px solid black;
+  }
+  &__form-wrapper{
+    @include flex(space-between,_,);
+    margin: 0 1rem;
+    @include tablet{
+      margin: 0 90px;
+    }
+    @include desktop{
+      margin: 0 320px;
+    }
+    
+  }
+  &__form-image-container{
+    height: 40px;
+    width: 40px;
+    @include tablet{
+      height: 48px;
+      width: 48px;
+      margin-right: 1.5rem;
+      margin-top: 1.5rem
+      
+    }
+    @include desktop{
+      margin-top: 2.5rem;
+    }
+    background-image: url("../assets/images/Mohan-muruge.jpg");
+    background-size: cover;
+    object-position: 50% 50%;
+    border-radius: 50% 50%;
+    margin-right: 1rem;
+    margin-top: 1.5rem
+    
+  }
+  
+}
+.comments-form{
+  width: 85%;
+  &__title{
+    @include section-subtitle-mobile;
+    color: $primary-silver-color;
+    @include section-subtitle-tablet-desktop;
+  }
+ 
+  &__text{
+    @include tablet{
+      font-size: 16px;
+    }
+    margin-top: 4px;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid $primary-silver-color;
+    &:active{
+      border: 1px solid $primary-black-color;
+    }
+    &:invalid{
+      border: 1px solid #D22D2D;
+    }
+  }
+
+  &__title-input{
+    height: 40px;
+    @include tablet{
+      height: 48px;
+    }
+    @extend .comments-form__text ;
+   
+   
+  }
+  // to position the button on the right end
+  &__btn-container{
+    @include tablet {
+      display: flex;
+    }
+    
+  }
+  &__btn{
+    width: 100%;
+    @include tablet{
+      width: 35%;
+      margin-left: auto;
+
+    }
+    
+    background-color: $primary-black-color;
+    color: $primary-white-color;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
   }
 }
-.comment {
-  display: flex;
-  &__placeholder {
-    background-color: chocolate;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    display: inline-block;
+
+
+// static comments
+.comment{
+  padding: 1.5rem 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  @include tablet{
+    padding: 2rem 0;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  @include desktop{
+    padding: 3rem 0;
+    margin-left: 320px;
+    margin-right: 320px;
+  }
+ 
+  @include flex (space-between,_,raw);
+  border-bottom: 2px solid $secondary-mercury-color;
+  &:first-child{
+    border-top: 2px solid $secondary-mercury-color;
+    
+  }
+  &:last-child{
+    margin-bottom: 2rem;
+    @include tablet {
+      margin-bottom: 3rem;
+    }
+  }
+  &__image-placeholder{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: $secondary-mercury-color;
+    border-radius: 50% 50%;
+    @include tablet{
+      width: 48px;
+      height: 48px;
+    }
+    
+  }
+  &__title-container{
+    @include flex(space-between,_,)
   }
 
-  // border: 2px solid black;
-  // border-left: none;
-  // border-right: none;
-  // border-bottom: none;
-  // border-collapse: collapse;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  // width:70%;
-  margin: 0 20px;
-  margin-bottom: 20px;
-  &__wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  &__wrapper{
+    width: 90%;
+    
   }
-  &__title {
-    width: 20%;
+  &__date{
+    color: $primary-silver-color;
   }
-  &__date {
-    width: 20%;
-  }
-  &__text {
-    width: 100%;
+  &__title{
+    color: $primary-black-color;
+    font-weight: 600;
+    
+    
   }
 }

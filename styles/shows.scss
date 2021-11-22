@@ -5,7 +5,7 @@
 
 // hero section
 .hero {
-  // height: fit-content;
+  
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
@@ -145,7 +145,7 @@
     @extend .show-card__venue;
   }
 
-  // to display subtitles only on first show card
+  // to hide all subtitles
   &__subtitle{
     @include tablet{
       visibility: hidden

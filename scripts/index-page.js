@@ -21,10 +21,11 @@ const commentsList = [
   },
 ];
 
-// console.log(commentsList);
+// select form 
 let form = document.querySelector(".comments-form");
 let commentObj = {};
 
+// add event listener function
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let date = new Date();
@@ -39,21 +40,16 @@ form.addEventListener("submit", (event) => {
     commentText: event.target.commentContent.value,
   };
 
-  // console.log(commentObj);
-  // commentObj.name = event.target.name.value;
-  // commentObj.timestamp = new Date;
-  // commentObj.commentText = event.target.commentContent.value;
 
-  commentsList.unshift(commentObj);
-  form.reset();
-  clearComments();
-  displayComments();
+  commentsList.unshift(commentObj);/*to add the new comment to the first place in the commentsList */
+  form.reset();/*to empty form input fields (reset to default) */
+  clearComments();/*clears comments from the html page */
+  displayComments();/*display it again with the new comments on the html page */
 });
-
-// console.log(commentsList);
 
 const commentsDiv = document.querySelector(".comments-cards");
 
+// function to display the comments to the comments div
 function displayComments() {
   for (let i = 0; i < commentsList.length; i++) {
     let currentComment = commentsList[i];
@@ -64,6 +60,7 @@ function displayComments() {
 
 displayComments();
 
+// function below will clear comments right after form event is submitted
 function clearComments() {
   commentsDiv.innerHTML = "";
 }
@@ -72,17 +69,6 @@ function createCommentCard(currentComment) {
   let commentCard = document.createElement("article");
   commentCard.classList.add("comment");
 
-//   let divider = document.createElement("hr");
-  // divider.setAttribute ("width", "100px")
-//   commentCard.appendChild(divider);
-
-  // if image is needed
-  // let imgElement = document.createElement("img");
-  // imgElement.classList.add("comment__image");
-  // imgElement.src = `./assets/images/${currentComment.name}.jpeg`;
-  // imgElement.alt = `head shot of  ${currentComment.name}`;
-  // commentCard.appendChild(imgElement);
-
   let spanElement = document.createElement("span");
   spanElement.classList.add("comment__image-placeholder");
   commentCard.appendChild(spanElement);
@@ -90,8 +76,7 @@ function createCommentCard(currentComment) {
   let wrapperElement = createWrapperElement(currentComment);
   commentCard.appendChild(wrapperElement);
 
-//   let endDivider = document.createElement("hr");
-//   commentCard.appendChild(endDivider);
+
 
   return commentCard;
 }
@@ -123,38 +108,11 @@ function createWrapperElement(currentComment) {
   return wrapperElement;
 }
 
-// form.addEventListener("submit", (event)=>{
-//     event.preventDefault();
-//     let commentCard = document.createElement("article");
-//     commentCard.classList.add("comment");
 
-//     let spanElement = document.createElement("span");
-//     spanElement.classList.add("comment__image-placeholder");
-//     commentCard.appendChild(spanElement);
 
-//     let wrapperElement = document.createElement("div");
-//     wrapperElement.classList.add("comment__wrapper");
 
-//     let nameElement = document.createElement("h3");
-//     nameElement.classList.add("comment__title");
-//     nameElement.innerText = event.target.name.value;
-//     wrapperElement.appendChild(nameElement);
 
-//     let timestampElement = document.createElement("time");
-//     timestampElement.classList.add("comment__date");
-//     let date = new Date();
-//     // let month = dateObj.getMonth()
-//     timestampElement.innerHTML =[date.getDate(),date.getMonth(),date.getUTCFullYear].join("/");
-//     wrapperElement.appendChild(timestampElement);
 
-//     let commentTextElement = document.createElement("p");
-//     commentTextElement.classList.add("comment__text");
-//     commentTextElement.innerText = event.target.commentContent.value;
-//     wrapperElement.appendChild(commentTextElement);
 
-//     commentCard.appendChild(wrapperElement);
-//     commentsDiv.prepend( commentCard);
-//     // form.reset();
-// } )
 
-// form.reset();
+

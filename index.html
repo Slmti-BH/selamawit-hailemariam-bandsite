@@ -88,20 +88,22 @@
         </article>
 
         <section class="comments">
-            <h2>Join the Conversation</h2>
+            <h2 class = "comments__title">Join the Conversation</h2>
             <div class = "comments__form-wrapper"> 
-                <img  class= "comments__form-image" src="./assets/images/Mohan-muruge.jpg" alt="head shot of Mohan-muruge">
+                <div class="comments__form-image-container">
+                    
+                </div>
 
                 <form class= "comments-form" action="">
                     <div>
-                    <label for="name" class= "comments-form__name">NAME</label><br>
+                    <label for="name" class= "comments-form__title">NAME</label><br>
                     <input name="name" class= "comments-form__title-input" type="text" placeholder="Enter your name"> 
                     </div>
                     <div>
                         <label for="comment-content" class= "comments-form__title">COMMENT</label><br>
-                        <textarea name="commentContent" id="" cols="30" rows="10" placeholder="Add a new comment"></textarea>
+                        <textarea class="comments-form__text" name="commentContent" id="" cols="30" rows="10" placeholder="Add a new comment"></textarea>
                     </div>
-                    <div>
+                    <div class="comments-form__btn-container">
                         <button class="comments-form__btn" type="submit">COMMENT</button>
                     </div>
                 </form>

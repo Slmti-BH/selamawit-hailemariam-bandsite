@@ -127,7 +127,6 @@ function createShowDate(show){
     let showDate = document.createElement("time");
     showDate.classList.add("show-card__date");
     showDate.innerText = show.date;
-    // showCard.appendChild(showDate);
     
     return showDate;
 }
@@ -137,7 +136,6 @@ function createShowVenue(show){
     let showVenue = document.createElement("p");
     showVenue.classList.add("show-card__venue");
     showVenue.innerText = show.venue;
-    // showCard.appendChild(showVenue);
     
     return showVenue;
 }
@@ -147,7 +145,6 @@ function createShowLocation(show){
     let showLocation = document.createElement("p");
     showLocation.classList.add("show-card__location");
     showLocation.innerText = show.location;
-    // showCard.appendChild(showLocation);
     
     return showLocation;
 }
