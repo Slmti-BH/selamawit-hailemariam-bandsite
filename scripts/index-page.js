@@ -51,14 +51,25 @@ let commentsDiv = document.querySelector(".comments-cards");
 
 // function to display the comments to the comments div
 function displayComments() {
-  for (let i = 0; i < commentsList.length; i++) {
-    let currentComment = commentsList[i];
+  for (let i = commentsData.length-1; i>=0; i--) {
+    let currentComment = commentsData[i];
     let commentCard = createCommentCard(currentComment);
     commentsDiv.appendChild(commentCard);
   }
-}
+};
+// function displayComments(comment) {
+ 
+//     let commentCard = createCommentCard(comment);
+//     commentsDiv.appendChild(commentCard);
+  
+// };
 
-displayComments();
+// commentsList.forEach((comment)=>{
+//   displayComments(comment);
+
+// });
+
+
 
 // function below will clear comments right after form event is submitted
 function clearComments() {

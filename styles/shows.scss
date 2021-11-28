@@ -5,58 +5,70 @@
 
 // hero section
 .hero {
-  
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-
+  display: block;
+  height: 30vh;
+  @include tablet{
+    height: 45vh;
+  }
+  @include desktop{
+    @include flex(_,_,);
+    height: 50vh;
+  }
+ 
   &__title {
     font-weight: 600;
     color: $secondary-alabaster-color;
-    font-size: 18px;
-    margin: 20px 1rem;
+    font-size: 16px;
+    margin-top: 1rem;
     @include tablet{
       @include section-title-tablet-desktop;
       font-size: 25px;
       font-weight: 600;
       margin-left: 40px;
+      margin-top: 0rem;
     }
     @include desktop{
-      width: 100%;
       padding-bottom: 0;
+      padding: 0;
+      margin-bottom: 0;
     }
   }
   &__subtitle {
     z-index: 1;
     color: $primary-white-color;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 25px;
     @include tablet{
       @include section-subtitle-tablet-desktop;
       font-size: 40px;
+      line-height: 48px;
       font-weight: 700;
+      padding-top: 0rem;
     }
     @include desktop{
-      width: 40%;
+      font-size: 48px;
+      line-height: 52px;
     }
   }
+
   // sound cloud
   &__sound-cloud {
     padding: 2rem 0;
 
     z-index: 1;
-    opacity: 0.9;
     width: calc(100% - 2rem);
     margin-left: 1rem;
     @include tablet{
-    width: calc(100% - 80px);
+    width: calc(80% - 80px);
     margin-left: 40px;
     }
     @include desktop{
-      width: 40%;
-      align-self: flex-end;
+      
+      width: calc(60% - 80px);
+      margin-right: 40px;
     }
   }
+
   // to get ride of the floating links from sound cloud
   &__sound-cloud-link {
     display: none;
@@ -69,12 +81,15 @@
     }
     @include desktop{
       width: calc(100% - 160px);
-      margin-right:  40px;
+      margin-right:  80px;
       margin-left: 80px;
-      justify-content: space-between;
-      flex-direction: row;
-      flex-wrap: wrap;
-      vertical-align: middle
+    }
+
+  }
+  &__flex-song-container{
+    z-index: 1;
+    @include desktop{
+    @include flex(_,center,);
     }
 
   }
@@ -165,7 +180,7 @@
   
 
   &__flex-container{
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
     @include tablet{
       &>*{/* inner content not alining properly, reset the margin on all */
         margin: 0;

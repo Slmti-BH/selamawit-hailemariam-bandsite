@@ -21,17 +21,20 @@
 
 body {
   margin: 0;
-  font-family: "avenir";
+  font-family: "avenir", Arial, Helvetica, sans-serif;
+  /*fallback fonts for browsers*/
 }
 
 h1,
-h2, h3,
+h2,
+h3,
 p {
   margin: 0 1rem;
 }
 @media screen and (min-width: 768px) {
   h1,
-h2, h3,
+h2,
+h3,
 p {
     margin: 0 2.5rem;
   }
@@ -63,6 +66,7 @@ p {
 @media screen and (min-width: 768px) {
   .header__logo-image {
     margin-left: 2.5rem;
+    margin-right: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -79,12 +83,12 @@ p {
 }
 @media screen and (min-width: 768px) {
   .header__nav {
-    width: 50%;
+    width: 33%;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__nav {
-    width: 40%;
+    width: 20%;
   }
 }
 .header__nav-list {
@@ -119,21 +123,21 @@ p {
 @media screen and (min-width: 768px) {
   .header__nav-link {
     width: auto;
-    padding: 1rem;
+    padding: 1rem 0;
     font-size: 0.875rem;
   }
 }
 .header__nav--active, .header__nav-link:hover {
   font-weight: 700;
   color: #FFFFFF;
-  border-bottom: 4px solid white;
+  border-bottom: 3px solid white;
   -webkit-text-decoration-color: #FFFFFF;
           text-decoration-color: #FFFFFF;
 }
 
 .hero {
   display: flex;
-  height: 70vh;
+  height: 40vh;
   position: relative;
   background: url("../assets/images/hero-shows.jpg") 50% 50%/cover;
   /* to fit and center the background image on section*/
@@ -155,7 +159,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 80vh;
+    height: 65vh;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -175,7 +179,7 @@ p {
 @media screen and (min-width: 768px) {
   .hero__title {
     line-height: 2.75rem;
-    font-size: 2.25rem;
+    font-size: 3.8rem;
     margin: 0 2.5rem;
   }
 }
@@ -186,8 +190,6 @@ p {
 }
 
 .footer {
-  position: relative;
-  /*to make the footer logo move in relation to to footer*/
   padding-top: 1rem;
   background-color: #323232;
   color: #FFFFFF;
@@ -214,8 +216,10 @@ p {
     font-weight: 400;
     line-height: 20px;
     font-size: 14px;
-    font-size: 1.375rem;
+    font-size: 2.2rem;
     font-weight: 600;
+    margin-right: 0px;
+    width: 230px;
   }
 }
 .footer__wrapper {
@@ -227,34 +231,48 @@ p {
 @media screen and (min-width: 768px) {
   .footer__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    width: 52%;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1280px) {
   .footer__wrapper {
-    width: 32%;
+    width: 100%;
     margin: 0 80px;
   }
 }
 .footer__icon-container {
-  width: 15%;
+  width: 25%;
   margin: 1rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: _;
   flex-direction: row;
 }
 @media screen and (min-width: 768px) {
   .footer__icon-container {
-    width: 22%;
+    width: 230px;
+    justify-content: flex-start;
+    margin: 1rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__icon-container {
     width: 25%;
+    margin-left: 2rem;
+  }
+}
+.footer__icon-image {
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .footer__icon-image {
+    margin-right: 30px;
+    height: 22px;
+    margin-left: 0;
   }
 }
 .footer__contacts-container {
@@ -266,29 +284,51 @@ p {
 @media screen and (min-width: 768px) {
   .footer__contacts-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: _;
     flex-direction: row;
+    width: 100%;
+    margin-top: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__contacts-container {
     width: 60%;
-    margin: 0 80px;
+    margin: 1.5rem 80px 0;
+    gap: 2rem;
   }
 }
 .footer__contact {
   margin-bottom: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__contact:first-child {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__contact {
+    margin-bottom: 1rem;
+  }
+}
 .footer__contact-text {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: 400;
   line-height: 18px;
   font-size: 13px;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .footer__contact-text {
+    width: 230px;
+    margin: 0 0 1.5rem;
+  }
 }
 .footer__copyright {
-  margin-top: 40px;
+  font-size: 13px;
+  margin-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {
@@ -296,28 +336,48 @@ p {
     line-height: 20px;
     font-size: 14px;
     margin-top: 0.5rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__copyright {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    margin-top: 0;
     margin-left: 7.5rem;
+  }
+}
+.footer__logo-top {
+  visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo-top {
+    visibility: visible;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__logo-top-img {
+    height: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo-top-img {
+    margin-right: 160px;
+  }
+}
+.footer__logo-bottom {
+  margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo-bottom {
+    visibility: hidden;
   }
 }
 .footer__logo {
   width: 5rem;
   height: auto;
-  position: absolute;
-  left: 1rem;
-  bottom: 2.5rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__logo {
-    position: absolute;
-    /*to make the footer logo move in relation to to footer*/
-    left: 85%;
-    top: 2.5rem;
-  }
 }
 
 .hero {
@@ -367,19 +427,19 @@ p {
   }
 }
 .about__image {
-  height: 70vh;
+  height: 30vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   .about__image {
-    height: 85vh;
+    height: 45vh;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__image {
-    height: 90vh;
+    height: 65vh;
   }
 }
 .about__bold-text {
@@ -391,8 +451,8 @@ p {
 @media screen and (min-width: 768px) {
   .about__bold-text {
     margin: 0 7rem;
-    line-height: 1.375rem;
-    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -432,13 +492,13 @@ p {
   .band-info__text {
     line-height: 1.375rem;
     font-size: 0.875rem;
-    width: 40%;
+    width: 48%;
     padding-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .band-info__text {
-    width: 45%;
+    width: 48%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -563,8 +623,8 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .comments__title {
-    margin-left: 120px;
-    font-size: 40px;
+    margin-left: 7.5rem;
+    font-size: 2.5rem;
   }
 }
 .comments__form-wrapper {
@@ -576,17 +636,17 @@ p {
 }
 @media screen and (min-width: 768px) {
   .comments__form-wrapper {
-    margin: 0 90px;
+    margin: 0 5.625rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments__form-wrapper {
-    margin: 0 320px;
+    margin: 0 20rem;
   }
 }
 .comments__form-image-container {
-  height: 40px;
-  width: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
   background-image: url("../assets/images/Mohan-muruge.jpg");
   background-size: cover;
   -o-object-position: 50% 50%;
@@ -597,8 +657,8 @@ p {
 }
 @media screen and (min-width: 768px) {
   .comments__form-image-container {
-    height: 48px;
-    width: 48px;
+    height: 3rem;
+    width: 3rem;
     margin-right: 1.5rem;
     margin-top: 1.5rem;
   }
@@ -661,9 +721,9 @@ p {
   width: 100%;
   background-color: #323232;
   color: #FFFFFF;
-  padding: 12px;
+  padding: 0.75rem;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   border-radius: 4px;
   margin-bottom: 1.5rem;
 }
@@ -687,15 +747,15 @@ p {
 @media screen and (min-width: 768px) {
   .comment {
     padding: 2rem 0;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comment {
     padding: 3rem 0;
-    margin-left: 320px;
-    margin-right: 320px;
+    margin-left: 20rem;
+    margin-right: 20rem;
   }
 }
 .comment:first-child {
@@ -711,15 +771,15 @@ p {
 }
 .comment__image-placeholder {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: #E1E1E1;
   border-radius: 50% 50%;
 }
 @media screen and (min-width: 768px) {
   .comment__image-placeholder {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .comment__title-container {
