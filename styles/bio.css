@@ -659,18 +659,16 @@ p {
   .comments__form-image-container {
     height: 3rem;
     width: 3rem;
-    margin-right: 1.5rem;
-    margin-top: 1.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .comments__form-image-container {
-    margin-top: 2.5rem;
   }
 }
 
 .comments-form {
   width: 85%;
+}
+@media screen and (min-width: 768px) {
+  .comments-form {
+    width: 90%;
+  }
 }
 .comments-form__title {
   color: #AFAFAF;
@@ -803,7 +801,17 @@ p {
   flex-direction: row;
 }
 .comment__wrapper {
-  width: 90%;
+  width: calc(90% - 1rem);
+}
+@media screen and (min-width: 768px) {
+  .comment__wrapper {
+    width: calc(95% - 1rem);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__wrapper {
+    width: calc(100% - 1rem);
+  }
 }
 .comment__date {
   color: #AFAFAF;

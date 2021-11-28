@@ -173,12 +173,8 @@
     @include tablet {
       height: 3rem;
       width: 3rem;
-      margin-right: 1.5rem;
-      margin-top: 1.5rem;
     }
-    @include desktop {
-      margin-top: 2.5rem;
-    }
+    
     background-image: url("../assets/images/Mohan-muruge.jpg");
     background-size: cover;
     object-position: 50% 50%;
@@ -189,6 +185,9 @@
 }
 .comments-form {
   width: 85%;
+  @include tablet{
+    width: 90%;
+  }
   &__title {
     color: $primary-silver-color;
     font-size: 14px;
@@ -224,7 +223,6 @@
   }
 
   &__title-input {
-    // z-index: 1;
     height: 40px;
     font-family: avenir, Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -300,7 +298,13 @@
   }
 
   &__wrapper {
-    width: 90%;
+    width: calc(90% - 1rem);
+    @include tablet{
+      width: calc(95% - 1rem); 
+    }
+    @include desktop{
+      width: calc(100% - 1rem); 
+    }
   }
   &__date {
     color: $primary-silver-color;
