@@ -1,81 +1,39 @@
-const commentsList = [
-  {
-    name: "Connor Walton",
-    timestamp: "02/17/2021",
-    commentText:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
+// using api request
+const api_key = "8cf94fd0-8658-4735-bdef-785096ec2cd7";
+const URL = "https://project-1-api.herokuapp.com/";
+const commentsDiv = document.querySelector(".comments-cards");/* select a spot on html to place comments in*/
 
-  {
-    name: "Emilie Beach",
-    timestamp: "01/09/2021",
-    commentText:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-
-  {
-    name: "Miles Acosta",
-    timestamp: "12/20/2020",
-    commentText:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
-
-// select form 
-let form = document.querySelector(".comments-form");
-let commentObj = {};
-
-// add event listener function
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let date = new Date();
-  let formattedDate = [
-    date.getDate(),
-    date.getMonth(),
-    date.getUTCFullYear(),
-  ].join("/");
-  let commentObj = {
-    name: event.target.name.value,
-    timestamp: formattedDate,
-    commentText: event.target.commentContent.value,
-  };
-
-
-  commentsList.unshift(commentObj);/*to add the new comment to the first place in the commentsList */
-  form.reset();/*to empty form input fields (reset to default) */
-  clearComments();/*clears comments from the html page */
-  displayComments();/*display it again with the new comments on the html page */
+// global function to make a GET request
+function getData(){
+  commentsDiv.innerHTML="";/*to remove duplicate comments every time a get request is done */
+  // commentsData.remove(); 
+axios
+.get(URL + `comments?api_key=` + api_key)
+.then ((result)=>{
+  const commentsData= result.data.reverse();/*to make new comments appear on top */
+  // console.log(result);
+commentsData.forEach((currentComment)=>{
+  displayComments(currentComment);
 });
-
-let commentsDiv = document.querySelector(".comments-cards");
-
-// function to display the comments to the comments div
-function displayComments() {
-  for (let i = commentsData.length-1; i>=0; i--) {
-    let currentComment = commentsData[i];
-    let commentCard = createCommentCard(currentComment);
-    commentsDiv.appendChild(commentCard);
-  }
-};
-// function displayComments(comment) {
- 
-//     let commentCard = createCommentCard(comment);
-//     commentsDiv.appendChild(commentCard);
-  
-// };
-
-// commentsList.forEach((comment)=>{
-//   displayComments(comment);
-
-// });
-
-
-
-// function below will clear comments right after form event is submitted
-function clearComments() {
-  commentsDiv.innerHTML = "";
+})
+.catch((error)=>{
+  console.log(error);
+});
 }
 
+
+function displayComments(currentComment) {
+ 
+  let commentCard = createCommentCard(currentComment);
+  commentsDiv.appendChild(commentCard);
+
+};
+
+// Call the function to GET the comments data
+getData()
+  
+
+// create the comment cards at resolved promise
 function createCommentCard(currentComment) {
   let commentCard = document.createElement("article");
   commentCard.classList.add("comment");
@@ -86,11 +44,8 @@ function createCommentCard(currentComment) {
 
   let wrapperElement = createWrapperElement(currentComment);
   commentCard.appendChild(wrapperElement);
-
-
-
   return commentCard;
-}
+};
 
 function createWrapperElement(currentComment) {
   let wrapperElement = document.createElement("div");
@@ -102,27 +57,59 @@ function createWrapperElement(currentComment) {
   let nameElement = document.createElement("h3");
   nameElement.classList.add("comment__title");
   nameElement.innerText = currentComment.name;
-  divElement.appendChild(nameElement);
+  divElement.appendChild(nameElement); 
 
   let timestampElement = document.createElement("time");
   timestampElement.classList.add("comment__date");
-  timestampElement.innerHTML = currentComment.timestamp;
+  // to format date to dd/mm/yyyy
+  let date = new Date(currentComment.timestamp);
+  let formattedDate = [
+    date.getDate(),
+    date.getMonth()+1,
+    date.getUTCFullYear(),
+  ].join("/");
+  
+  timestampElement.innerHTML = formattedDate;
   divElement.appendChild(timestampElement);
 
   wrapperElement.appendChild(divElement);
 
   let commentTextElement = document.createElement("p");
   commentTextElement.classList.add("comment__text");
-  commentTextElement.innerText = currentComment.commentText;
+  
+  commentTextElement.innerText = currentComment.comment;
   wrapperElement.appendChild(commentTextElement);
 
   return wrapperElement;
+};
+
+
+// select form 
+let form = document.querySelector(".comments-form");
+
+// add event listener for form submit
+form.addEventListener("submit", (event) => {
+  event.preventDefault();/*to prevent page from reloading after form submit*/
+  let commentObj = {
+    name: event.target.name.value,
+    comment: event.target.commentContent.value,
+  };
+  handelFormSubmit(commentObj);
+  event.target.reset();/*to empty form input fields*/
+});
+
+//on form submit make a post request to add the new comment
+function handelFormSubmit(commentObj){
+  axios
+  .post(`https://project-1-api.herokuapp.com/comments?api_key=`+api_key, commentObj)
+  .then((result)=>{
+    getData();/*call this function to get  all comments including the new ones*/
+  })
+  .catch((error)=>{
+    console.log("Your comments was not added ", error)
+  })
+
 }
-
-
-
-
-
 
 
 

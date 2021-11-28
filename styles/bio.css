@@ -673,39 +673,53 @@ p {
   width: 85%;
 }
 .comments-form__title {
-  font-family: "avenir";
-  font-weight: 600;
-  padding: 16px 0 8px;
-  font-size: 14px;
-  line-height: 22px;
   color: #AFAFAF;
-  font-family: "avenir";
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 600;
-  padding: 32px 0 1rem;
-  font-size: 24px;
-  line-height: 32px;
 }
 .comments-form__text, .comments-form__title-input {
+  font-family: avenir, Arial, Helvetica, sans-serif;
+  background-color: #FAFAFA;
+  padding: 1rem;
   margin-top: 4px;
   width: 100%;
   margin-bottom: 1rem;
   margin-top: 4px;
   border-radius: 4px;
   border: 1px solid #AFAFAF;
+  outline: none;
 }
 @media screen and (min-width: 768px) {
   .comments-form__text, .comments-form__title-input {
     font-size: 16px;
   }
 }
-.comments-form__text:active, .comments-form__title-input:active {
+.comments-form__text::-moz-placeholder, .comments-form__title-input::-moz-placeholder {
+  color: #323232;
+  font-weight: 400;
+  font-size: 18px;
+}
+.comments-form__text:-ms-input-placeholder, .comments-form__title-input:-ms-input-placeholder {
+  color: #323232;
+  font-weight: 400;
+  font-size: 18px;
+}
+.comments-form__text::placeholder, .comments-form__title-input::placeholder {
+  color: #323232;
+  font-weight: 400;
+  font-size: 18px;
+}
+.comments-form__text:focus, .comments-form__title-input:focus {
   border: 1px solid #323232;
 }
 .comments-form__text:invalid, .comments-form__title-input:invalid {
-  border: 1px solid #D22D2D;
+  border: 1px solid #d22d2d;
 }
 .comments-form__title-input {
   height: 40px;
+  font-family: avenir, Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .comments-form__title-input {

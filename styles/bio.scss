@@ -5,8 +5,7 @@
 
 // hero section
 .hero {
-  background: url("../assets/images/hero-bio.jpg") 50% 50% / cover; 
-  
+  background: url("../assets/images/hero-bio.jpg") 50% 50% / cover;
 }
 
 // about us section
@@ -147,42 +146,37 @@
 }
 
 // comment section
-
 .comments {
-  
-  &__title{
+  &__title {
     @include section-title-mobile;
-    @include tablet{
+    @include tablet {
       @include section-title-tablet-desktop;
     }
-    @include desktop{
+    @include desktop {
       margin-left: 7.5rem;
       font-size: 2.5rem;
     }
-
   }
-  &__form-wrapper{
-    @include flex(space-between,_,);
+  &__form-wrapper {
+    @include flex(space-between, _);
     margin: 0 1rem;
-    @include tablet{
+    @include tablet {
       margin: 0 5.625rem;
     }
-    @include desktop{
+    @include desktop {
       margin: 0 20rem;
     }
-    
   }
-  &__form-image-container{
+  &__form-image-container {
     height: 2.5rem;
     width: 2.5rem;
-    @include tablet{
+    @include tablet {
       height: 3rem;
       width: 3rem;
       margin-right: 1.5rem;
-      margin-top: 1.5rem
-      
+      margin-top: 1.5rem;
     }
-    @include desktop{
+    @include desktop {
       margin-top: 2.5rem;
     }
     background-image: url("../assets/images/Mohan-muruge.jpg");
@@ -190,21 +184,23 @@
     object-position: 50% 50%;
     border-radius: 50% 50%;
     margin-right: 1rem;
-    margin-top: 1.5rem
-    
+    margin-top: 1.5rem;
   }
-  
 }
-.comments-form{
+.comments-form {
   width: 85%;
-  &__title{
-    @include section-subtitle-mobile;
+  &__title {
     color: $primary-silver-color;
-    @include section-subtitle-tablet-desktop;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
   }
- 
-  &__text{
-    @include tablet{
+
+  &__text {
+    font-family: avenir, Arial, Helvetica, sans-serif;
+    background-color: $secondary-alabaster-color;
+    padding: 1rem;
+    @include tablet {
       font-size: 16px;
     }
     margin-top: 4px;
@@ -213,38 +209,44 @@
     margin-top: 4px;
     border-radius: 4px;
     border: 1px solid $primary-silver-color;
-    &:active{
+    outline: none;
+    &::placeholder {
+      color: $primary-black-color;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    &:focus {
       border: 1px solid $primary-black-color;
     }
-    &:invalid{
-      border: 1px solid #D22D2D;
+    &:invalid {
+      border: 1px solid #d22d2d;
     }
   }
 
-  &__title-input{
+  &__title-input {
+    // z-index: 1;
     height: 40px;
-    @include tablet{
+    font-family: avenir, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  
+    @include tablet {
       height: 48px;
     }
-    @extend .comments-form__text ;
-   
-   
+    @extend .comments-form__text;
   }
   // to position the button on the right end
-  &__btn-container{
+  &__btn-container {
     @include tablet {
       display: flex;
     }
-    
   }
-  &__btn{
+  &__btn {
     width: 100%;
-    @include tablet{
+    @include tablet {
       width: 35%;
       margin-left: auto;
-
     }
-    
+
     background-color: $primary-black-color;
     color: $primary-white-color;
     padding: 0.75rem;
@@ -255,62 +257,56 @@
   }
 }
 
-
 // static comments
-.comment{
+.comment {
   padding: 1.5rem 0;
   margin-left: 1rem;
   margin-right: 1rem;
-  @include tablet{
+  @include tablet {
     padding: 2rem 0;
     margin-left: 5rem;
     margin-right: 5rem;
   }
-  @include desktop{
+  @include desktop {
     padding: 3rem 0;
     margin-left: 20rem;
     margin-right: 20rem;
   }
- 
-  @include flex (space-between,_,raw);
+
+  @include flex(space-between, _, raw);
   border-bottom: 2px solid $secondary-mercury-color;
-  &:first-child{
+  &:first-child {
     border-top: 2px solid $secondary-mercury-color;
-    
   }
-  &:last-child{
+  &:last-child {
     margin-bottom: 2rem;
     @include tablet {
       margin-bottom: 3rem;
     }
   }
-  &__image-placeholder{
+  &__image-placeholder {
     display: block;
     width: 2.5rem;
     height: 2.5rem;
     background-color: $secondary-mercury-color;
     border-radius: 50% 50%;
-    @include tablet{
+    @include tablet {
       width: 3rem;
       height: 3rem;
     }
-    
   }
-  &__title-container{
-    @include flex(space-between,_,)
+  &__title-container {
+    @include flex(space-between, _);
   }
 
-  &__wrapper{
+  &__wrapper {
     width: 90%;
-    
   }
-  &__date{
+  &__date {
     color: $primary-silver-color;
   }
-  &__title{
+  &__title {
     color: $primary-black-color;
     font-weight: 600;
-    
-    
   }
 }
