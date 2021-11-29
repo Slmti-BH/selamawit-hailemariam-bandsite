@@ -406,7 +406,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-family: "avenir";
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -432,7 +431,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .hero__subtitle {
-    font-family: "avenir";
     font-weight: 600;
     padding: 2rem 0 1rem;
     font-size: 1.5rem;
@@ -502,7 +500,6 @@ p {
 }
 
 .shows__title {
-  font-family: "avenir";
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -512,7 +509,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .shows__title {
-    font-family: "avenir";
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -565,7 +561,6 @@ p {
   }
 }
 .show-card__subtitle {
-  font-family: "avenir";
   font-weight: 600;
   padding: 1rem 0 0.5rem;
   font-size: 0.875rem;
@@ -580,7 +575,7 @@ p {
   }
 }
 .show-card__venue, .show-card__location {
-  font-weight: 600;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .show-card__venue, .show-card__location {

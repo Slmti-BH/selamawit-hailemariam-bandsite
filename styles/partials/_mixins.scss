@@ -16,7 +16,6 @@
     
 }
 
-
 // mixin for common flex property
 @mixin flex($justify-content, $align-items, $flex-direction: row) {
     display: flex;
@@ -29,7 +28,6 @@
 
 // mixin for titles
 @mixin section-title-mobile {
-    font-family:"avenir";
     font-weight: 700; 
     font-size: 1.5rem;
     line-height: 2rem;
@@ -38,7 +36,6 @@
 }
 
 @mixin section-title-tablet-desktop {
-    font-family:"avenir";
     font-weight: 700; 
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -48,7 +45,6 @@
 
 
 @mixin section-subtitle-mobile {
-    font-family:"avenir";
     font-weight: 600; 
     padding: 1rem 0 0.5rem ;
     font-size: 0.875rem;
@@ -56,7 +52,6 @@
 }
 
 @mixin section-subtitle-tablet-desktop {
-    font-family:"avenir";
     font-weight: 600; 
     padding: 2rem 0 1rem ;
     font-size: 1.5rem;

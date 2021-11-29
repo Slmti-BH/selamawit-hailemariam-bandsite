@@ -50,7 +50,7 @@ function createCommentCard(currentComment) {
   const imgElement = document.createElement("img");
   imgElement.classList.add("comment__image-placeholder");
   imgElement.src="./assets/images/image-placeholder.jpg";
-  imgElement.alt=`Head shot of `+ currentComment.name;
+  imgElement.alt=`Image uploaded by `+ currentComment.name;
   commentCard.appendChild(imgElement);
 
   const wrapperElement = createWrapperElement(currentComment);
