@@ -18,17 +18,16 @@
   &__title {
     font-weight: 600;
     color: $secondary-alabaster-color;
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 1rem;
     @include tablet{
       @include section-title-tablet-desktop;
-      font-size: 25px;
+      font-size: 1.563rem;
       font-weight: 600;
-      margin-left: 40px;
-      margin-top: 0rem;
+      margin-left: 2.5rem;
+      margin-top: 0;
     }
     @include desktop{
-      padding-bottom: 0;
       padding: 0;
       margin-bottom: 0;
     }
@@ -37,17 +36,17 @@
     z-index: 1;
     color: $primary-white-color;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.563rem;
     @include tablet{
       @include section-subtitle-tablet-desktop;
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 2.5rem;
+      line-height: 3rem;
       font-weight: 700;
-      padding-top: 0rem;
+      padding-top: 0;
     }
     @include desktop{
-      font-size: 48px;
-      line-height: 52px;
+      font-size: 3rem;
+      line-height: 3.25rem;
     }
   }
 
@@ -60,12 +59,12 @@
     margin-left: 1rem;
     @include tablet{
     width: calc(80% - 80px);
-    margin-left: 40px;
+    margin-left: 2.5rem;
     }
     @include desktop{
       
       width: calc(60% - 80px);
-      margin-right: 40px;
+      margin-right: 2.5rem;
     }
   }
 
@@ -81,8 +80,8 @@
     }
     @include desktop{
       width: calc(100% - 160px);
-      margin-right:  80px;
-      margin-left: 80px;
+      margin-right:  5rem;
+      margin-left: 5rem;
     }
 
   }
@@ -100,12 +99,12 @@
 .shows {
   &__title {
     @include section-title-mobile;
-    padding-top: 20px;
+    padding-top: 1.25rem;
     @include tablet{
       @include section-title-tablet-desktop
     }
     @include desktop{
-      margin-left: 120px;
+      margin-left: 7.5rem;
     }
     
   }
@@ -116,8 +115,8 @@
       margin: 0 1rem 2.5rem;
     }
     @include desktop{
-      margin-left: 340px;
-      margin-right: 120px;
+      margin-left: 21.25rem;
+      margin-right: 7.5rem;
     }
     
   }
@@ -131,7 +130,7 @@
   &__date {
     margin-left: 1rem;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     @include tablet{
       margin-left: calc(40px - 1rem);
       
@@ -140,7 +139,7 @@
   border-bottom: 2px solid $secondary-mercury-color;
   &__subtitle {
     @include section-subtitle-mobile;
-    font-size: 13px;
+    font-size: 0.813rem;
     color: $primary-silver-color;
     @include tablet{
       padding-top: 0;
@@ -152,7 +151,7 @@
   &__venue {
     font-weight: 600;
     @include tablet{
-      margin-left: 24px;
+      margin-left: 1.5rem;
       
     }
   }
@@ -185,18 +184,15 @@
       }
       &:first-child{/*  reset the first child with the right margin*/
         margin-left: calc(40px - 1rem);
-        
 
       }
       @include flex(initial,initial,column);
       width: 25%;
-     
-     
       
     }
   }
   &__btn {
-    font-size: 15px;
+    font-size: 0.938rem;
     font-weight: 600;
     width: calc(100% - 2rem);
     margin: 1rem;
@@ -205,7 +201,7 @@
     padding: 0.7rem;
     border-radius: 6px;
     @include tablet{
-      font-size: 16px;
+      font-size: 1rem;
       width: 25%;
       margin: 1.5rem;
     }

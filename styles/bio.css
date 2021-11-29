@@ -206,16 +206,16 @@ p {
 }
 .footer__title {
   font-weight: 400;
-  line-height: 18px;
-  font-size: 13px;
+  line-height: 1.125rem;
+  font-size: 0.813rem;
   font-size: 20px;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .footer__title {
     font-weight: 400;
-    line-height: 20px;
-    font-size: 14px;
+    line-height: 1.25rem;
+    font-size: 0.875rem;
     font-size: 2.2rem;
     font-weight: 600;
     margin-right: 0px;
@@ -314,8 +314,8 @@ p {
 .footer__contact-text {
   margin-bottom: 1rem;
   font-weight: 400;
-  line-height: 18px;
-  font-size: 13px;
+  line-height: 1.125rem;
+  font-size: 0.813rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -333,8 +333,8 @@ p {
 @media screen and (min-width: 768px) {
   .footer__copyright {
     font-weight: 400;
-    line-height: 20px;
-    font-size: 14px;
+    line-height: 1.25rem;
+    font-size: 0.875rem;
     margin-top: 0.5rem;
     font-weight: 600;
     padding-bottom: 2rem;
@@ -393,19 +393,19 @@ p {
   color: #323232;
   font-family: "avenir";
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  padding: 24px 0 16px;
-  margin-left: 16px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1.5rem 0 1rem;
+  margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .about__title {
     font-family: "avenir";
     font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    padding: 48px 0 24px;
-    margin-left: 40px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding: 3rem 0 1.5rem;
+    margin-left: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -464,17 +464,17 @@ p {
 .band-info__title {
   font-family: "avenir";
   font-weight: 600;
-  padding: 16px 0 8px;
-  font-size: 14px;
-  line-height: 22px;
+  padding: 1rem 0 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 @media screen and (min-width: 768px) {
   .band-info__title {
     font-family: "avenir";
     font-weight: 600;
-    padding: 32px 0 1rem;
-    font-size: 24px;
-    line-height: 32px;
+    padding: 2rem 0 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     margin-left: 7rem;
   }
 }
@@ -537,19 +537,19 @@ p {
 .photo-gallery__title {
   font-family: "avenir";
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  padding: 24px 0 16px;
-  margin-left: 16px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1.5rem 0 1rem;
+  margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .photo-gallery__title {
     font-family: "avenir";
     font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    padding: 48px 0 24px;
-    margin-left: 40px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding: 3rem 0 1.5rem;
+    margin-left: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -606,19 +606,19 @@ p {
 .comments__title {
   font-family: "avenir";
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  padding: 24px 0 16px;
-  margin-left: 16px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1.5rem 0 1rem;
+  margin-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .comments__title {
     font-family: "avenir";
     font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    padding: 48px 0 24px;
-    margin-left: 40px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding: 3rem 0 1.5rem;
+    margin-left: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -672,18 +672,18 @@ p {
 }
 .comments-form__title {
   color: #AFAFAF;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   font-weight: 600;
 }
 .comments-form__text, .comments-form__title-input {
   font-family: avenir, Arial, Helvetica, sans-serif;
   background-color: #FAFAFA;
   padding: 1rem;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   width: 100%;
   margin-bottom: 1rem;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   border-radius: 4px;
   border: 1px solid #AFAFAF;
   outline: none;
@@ -696,17 +696,17 @@ p {
 .comments-form__text::-moz-placeholder, .comments-form__title-input::-moz-placeholder {
   color: #323232;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .comments-form__text:-ms-input-placeholder, .comments-form__title-input:-ms-input-placeholder {
   color: #323232;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .comments-form__text::placeholder, .comments-form__title-input::placeholder {
   color: #323232;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .comments-form__text:focus, .comments-form__title-input:focus {
   border: 1px solid #323232;
@@ -715,13 +715,13 @@ p {
   border: 1px solid #d22d2d;
 }
 .comments-form__title-input {
-  height: 40px;
+  height: 2.5rem;
   font-family: avenir, Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .comments-form__title-input {
-    height: 48px;
+    height: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -810,6 +810,7 @@ p {
 @media screen and (min-width: 1280px) {
   .comment__wrapper {
     width: calc(100% - 1rem);
+    margin-left: 1rem;
   }
 }
 .comment__date {
