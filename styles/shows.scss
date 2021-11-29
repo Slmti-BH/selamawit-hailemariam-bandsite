@@ -11,7 +11,7 @@
     height: 45vh;
   }
   @include desktop{
-    @include flex(_,_,);
+    @include flex(initial,center,initial);
     height: 50vh;
   }
  
@@ -75,7 +75,7 @@
   }
   &__flex-container{
     width: 100%;
-    @include flex(_,_,column);
+    @include flex(initial,initial,column);
     @include tablet{
       width: 70%;
     }
@@ -89,7 +89,7 @@
   &__flex-song-container{
     z-index: 1;
     @include desktop{
-    @include flex(_,center,);
+    @include flex(initial,center,initial);
     }
 
   }
@@ -110,7 +110,7 @@
     
   }
   &__wrapper {
-    @include flex(_, _, column);
+    @include flex(initial, initial, column);
 
     @include tablet{
       margin: 0 1rem 2.5rem;
@@ -125,7 +125,7 @@
 
 .show-card {
   @include tablet{
-    @include flex(space-between,_,);
+    @include flex(space-between,initial,initial);
     
   }
   &__date {
@@ -178,9 +178,7 @@
     }
   }
   
-
   &__flex-container{
-    // margin-bottom: 2rem;
     @include tablet{
       &>*{/* inner content not alining properly, reset the margin on all */
         margin: 0;
@@ -190,7 +188,7 @@
         
 
       }
-      @include flex(_,_,column);
+      @include flex(initial,initial,column);
       width: 25%;
      
      

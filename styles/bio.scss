@@ -85,7 +85,7 @@
   &__container {
     @include tablet {
       margin: 0 7rem;
-      @include flex(space-between, _, row);
+      @include flex(space-between, initial, row);
     }
     @include desktop {
       margin: 0 13rem;
@@ -117,15 +117,15 @@
     }
   }
   &__container {
-    @include flex(_, _, column);
+    @include flex(initial, initial, column);
     @extend .about__image-container;
     @include tablet {
-      @include flex(space-between, _, row);
+      @include flex(space-between, initial, row);
       flex-wrap: wrap;
       margin: 0 2.5rem;
     }
     @include desktop {
-      @include flex(space-between, _, row);
+      @include flex(space-between, initial, row);
       flex-wrap: wrap;
       margin: 0 7.5rem;
     }
@@ -158,7 +158,7 @@
     }
   }
   &__form-wrapper {
-    @include flex(space-between, _);
+    @include flex(space-between, initial,initial);
     margin: 0 1rem;
     @include tablet {
       margin: 0 5.625rem;
@@ -271,7 +271,7 @@
     margin-right: 20rem;
   }
 
-  @include flex(space-between, _, raw);
+  @include flex(space-between, initial,initial );
   border-bottom: 2px solid $secondary-mercury-color;
   &:first-child {
     border-top: 2px solid $secondary-mercury-color;
@@ -286,7 +286,7 @@
     display: block;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: $secondary-mercury-color;
+    // background-color: $secondary-mercury-color;
     border-radius: 50% 50%;
     @include tablet {
       width: 3rem;
@@ -294,7 +294,7 @@
     }
   }
   &__title-container {
-    @include flex(space-between, _);
+    @include flex(space-between, initial,initial);
   }
 
   &__wrapper {

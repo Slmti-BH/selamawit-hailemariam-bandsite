@@ -1,12 +1,13 @@
-// using api request
+// using API request
 const api_key = "8cf94fd0-8658-4735-bdef-785096ec2cd7";
 const URL = "https://project-1-api.herokuapp.com/";
 const commentsDiv = document.querySelector(".comments-cards");/* select a spot on html to place comments in*/
 
 // global function to make a GET request
 function getData(){
-  commentsDiv.innerHTML="";/*to remove duplicate comments every time a get request is done */
-  // commentsData.remove(); 
+
+  //to remove duplicate comments every time a get request is made
+  removeAllChildNodes(commentsDiv);
 axios
 .get(URL + `comments?api_key=` + api_key)
 .then ((result)=>{
@@ -17,14 +18,21 @@ commentsData.forEach((currentComment)=>{
 });
 })
 .catch((error)=>{
-  console.log(error);
+  console.log(`There was an error ` + error);
 });
 }
 
+// function to remove all children of commentDiv
+function removeAllChildNodes(commentsDiv) {
+  while (commentsDiv.firstChild) {
+    commentsDiv.removeChild(commentsDiv.firstChild);
+  }
+}
 
+// to display comment card
 function displayComments(currentComment) {
  
-  let commentCard = createCommentCard(currentComment);
+  const commentCard = createCommentCard(currentComment);
   commentsDiv.appendChild(commentCard);
 
 };
@@ -35,35 +43,40 @@ getData()
 
 // create the comment cards at resolved promise
 function createCommentCard(currentComment) {
-  let commentCard = document.createElement("article");
+  const commentCard = document.createElement("article");
   commentCard.classList.add("comment");
 
-  let spanElement = document.createElement("span");
-  spanElement.classList.add("comment__image-placeholder");
-  commentCard.appendChild(spanElement);
+  // create img element
+  const imgElement = document.createElement("img");
+  imgElement.classList.add("comment__image-placeholder");
+  imgElement.src="./assets/images/image-placeholder.jpg";
+  imgElement.alt=`Head shot of `+ currentComment.name;
+  commentCard.appendChild(imgElement);
 
-  let wrapperElement = createWrapperElement(currentComment);
+  const wrapperElement = createWrapperElement(currentComment);
   commentCard.appendChild(wrapperElement);
   return commentCard;
 };
 
 function createWrapperElement(currentComment) {
-  let wrapperElement = document.createElement("div");
+  const wrapperElement = document.createElement("div");
   wrapperElement.classList.add("comment__wrapper");
 
-  let divElement = document.createElement("div");
+  const divElement = document.createElement("div");
   divElement.classList.add("comment__title-container");
 
-  let nameElement = document.createElement("h3");
+  const nameElement = document.createElement("h3");
   nameElement.classList.add("comment__title");
+
   nameElement.innerText = currentComment.name;
   divElement.appendChild(nameElement); 
 
-  let timestampElement = document.createElement("time");
+  const timestampElement = document.createElement("time");
   timestampElement.classList.add("comment__date");
+
   // to format date to dd/mm/yyyy
-  let date = new Date(currentComment.timestamp);
-  let formattedDate = [
+  const date = new Date(currentComment.timestamp);
+  const formattedDate = [
     date.getDate(),
     date.getMonth()+1,
     date.getUTCFullYear(),
@@ -74,7 +87,7 @@ function createWrapperElement(currentComment) {
 
   wrapperElement.appendChild(divElement);
 
-  let commentTextElement = document.createElement("p");
+  const commentTextElement = document.createElement("p");
   commentTextElement.classList.add("comment__text");
   
   commentTextElement.innerText = currentComment.comment;
@@ -85,12 +98,12 @@ function createWrapperElement(currentComment) {
 
 
 // select form 
-let form = document.querySelector(".comments-form");
+const form = document.querySelector(".comments-form");
 
 // add event listener for form submit
 form.addEventListener("submit", (event) => {
   event.preventDefault();/*to prevent page from reloading after form submit*/
-  let commentObj = {
+  const commentObj = {
     name: event.target.name.value,
     comment: event.target.commentContent.value,
   };
@@ -101,7 +114,7 @@ form.addEventListener("submit", (event) => {
 //on form submit make a post request to add the new comment
 function handelFormSubmit(commentObj){
   axios
-  .post(`https://project-1-api.herokuapp.com/comments?api_key=`+api_key, commentObj)
+  .post(URL + `comments?api_key=` + api_key, commentObj)
   .then((result)=>{
     getData();/*call this function to get  all comments including the new ones*/
   })

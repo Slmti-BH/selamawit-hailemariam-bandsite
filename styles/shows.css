@@ -392,9 +392,9 @@ p {
 @media screen and (min-width: 1280px) {
   .hero {
     display: flex;
-    justify-content: _;
-    align-items: _;
-    flex-direction: row;
+    justify-content: initial;
+    align-items: center;
+    flex-direction: initial;
     height: 50vh;
   }
 }
@@ -474,8 +474,8 @@ p {
 .hero__flex-container {
   width: 100%;
   display: flex;
-  justify-content: _;
-  align-items: _;
+  justify-content: initial;
+  align-items: initial;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
@@ -496,9 +496,9 @@ p {
 @media screen and (min-width: 1280px) {
   .hero__flex-song-container {
     display: flex;
-    justify-content: _;
+    justify-content: initial;
     align-items: center;
-    flex-direction: row;
+    flex-direction: initial;
   }
 }
 
@@ -528,8 +528,8 @@ p {
 }
 .shows__wrapper {
   display: flex;
-  justify-content: _;
-  align-items: _;
+  justify-content: initial;
+  align-items: initial;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
@@ -551,8 +551,8 @@ p {
   .show-card {
     display: flex;
     justify-content: space-between;
-    align-items: _;
-    flex-direction: row;
+    align-items: initial;
+    flex-direction: initial;
   }
 }
 .show-card__date {
@@ -601,8 +601,8 @@ p {
 @media screen and (min-width: 768px) {
   .show-card__flex-container {
     display: flex;
-    justify-content: _;
-    align-items: _;
+    justify-content: initial;
+    align-items: initial;
     flex-direction: column;
     width: 25%;
   }
